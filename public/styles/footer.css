@@ -1,0 +1,30 @@
+.footer{
+    width: 100vw;
+    height: 160px;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+}
+
+.footer-center{
+    display: flex;
+    height: 100%;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(26, 26, 34, 0.158);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+}
+
+.footer-center img{
+    cursor: pointer;
+    z-index: 99;
+    transition: all 150ms;
+}

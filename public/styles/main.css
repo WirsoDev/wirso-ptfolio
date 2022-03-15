@@ -1,0 +1,30 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(100deg, #2f323b 1.05%, #0e0e13 88.69%);
+    padding: 20px 65px;
+    overflow: hidden;
+}
+
+.nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav p{
+    font-family: 'gilroy-bold';
+    color: #F0F0F0;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav img{
+    width: 25px;
+}
+
+.nav-logos img{
+    margin-left: 5px;
+}
+

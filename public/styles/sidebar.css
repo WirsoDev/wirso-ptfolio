@@ -1,0 +1,105 @@
+.side-bar{
+    position: absolute;
+    right: 65px;
+    bottom: 30%;
+    z-index: 99;
+}
+
+.side-bar--logos{
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar--logos img{
+    width: 22px;
+    margin-bottom: 25px;
+    transform: scale(.9);
+    transition: 150ms ease-in-out;
+}
+
+
+.py-logo::before{
+    content: "Python";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.js-logo::before{
+    content: "JavaScript";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.react-logo::before{
+    content: "ReactJs";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.post-logo::before{
+    content: "PostgreSQL";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.linux-logo::before{
+    content: "Ubunto";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.git-logo::before{
+    content: "Git/GitHub";
+    color: #F0F0F0;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.py-logo:hover::before,
+.js-logo:hover::before,
+.react-logo:hover::before,
+.post-logo:hover::before,
+.linux-logo:hover::before,
+.git-logo:hover::before
+{
+    opacity: 1;
+    transform: translateX(-95px);
+    transition: all 250ms;
+}
+
+.py-logo,
+.js-logo,
+.react-logo,
+.post-logo,
+.linux-logo,
+.git-logo
+{
+    transition: 250ms;
+}
+
+.py-logo:hover,
+.js-logo:hover,
+.react-logo:hover,
+.post-logo:hover,
+.linux-logo:hover,
+.git-logo:hover
+{
+    transform: scale(1.1);
+}

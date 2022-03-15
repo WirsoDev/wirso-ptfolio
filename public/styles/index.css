@@ -31,3 +31,10 @@
     box-sizing: border-box;
     font-family: 'gilroy', sans-serif;
 }
+
+img {
+    pointer-events: none
+  }
+
+::selection { background: transparent; }
+::-moz-selection { background: transparent; }
