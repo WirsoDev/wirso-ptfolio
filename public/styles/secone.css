@@ -57,7 +57,13 @@
 .glass-cnt p{
     font-smooth: always;
     color: #F0F0F0;
-    font-size: 1.15rem;
-    margin-top: 10px;
+    font-size: 1.55rem;
+    margin-top: 5px;
     letter-spacing: 2px;
 }
+
+.glass-job{
+    font-size: 15px !important;
+}
+
+
