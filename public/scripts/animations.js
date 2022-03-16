@@ -6,7 +6,6 @@ const dots = document.querySelector('.sec-dots')
 const glass = document.querySelector('.sec-glass')
 const footer = document.querySelector('.footer')
 
-
 var tl = anime.timeline({
     duration: 550,
     direction: 'reverse',

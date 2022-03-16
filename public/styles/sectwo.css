@@ -55,7 +55,10 @@
 
 .sec-two--links img{
     width: 35px;
-    padding: 3px;
+}
+
+.sec-links a{
+    padding: 5px;
 }
 
 
