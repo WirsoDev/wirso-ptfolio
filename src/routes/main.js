@@ -3,6 +3,8 @@ const router = Express.Router()
 const dataService = require('../services/dataService')
 
 router.get('/', async (req, res)=>{
+
+
     const userAgent = req.headers['user-agent']
     let browserName
     if(userAgent.match(/chrome|chromium|crios/i)){
@@ -18,8 +20,9 @@ router.get('/', async (req, res)=>{
       }else{
         browserName="No browser detection";
       }
-
     await dataService.addviews(browserName)
+
+
     return(res.render('main.html'))
 })
 
