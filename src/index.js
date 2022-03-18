@@ -13,6 +13,7 @@ nunjucks.configure('src/views', {
 
 
 app.use('/', require('./routes/main'))
+app.use('/', require('./routes/stats'))
 
 
 // start server
