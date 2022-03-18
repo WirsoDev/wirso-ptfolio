@@ -1,10 +1,14 @@
 const Express = require('express')
 const nunjucks = require('nunjucks')
+const bodyparser = require('body-parser')
 
 
 const app = Express()
 
 app.use(Express.static('public'))
+app.use(Express.urlencoded({ extended: true }));
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({extended: true}))
 
 nunjucks.configure('src/views', {
     express: app,

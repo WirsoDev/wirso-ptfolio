@@ -23,6 +23,13 @@
     font-family: 'gilroy-bold';
 }
 
+.stats-title h3 span{
+    color: #F0F0F0;
+    font-size: 15px;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
 .stats-wrap-cont{
     display: flex;
     width: 80vw;

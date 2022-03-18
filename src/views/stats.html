@@ -12,33 +12,34 @@
     <div class="stats-main">
         <div class="stats-main-cnt">
             <div class="stats-title">
-                <h3>Personal Stats</h3>
+                <h3>Personal Stats |<span onclick="logout()"> Logout</span></h3>
             </div>
             <div class="stats-wrap">
                 <div class="stats-wrap-cont">
                     <div class="stats--card">
                         <h3>Views</h3>
-                        <p>55</p>
+                        <p>{{data.views}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>Emails</h3>
-                        <p>15</p>
+                        <p>{{data.emails}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>CV Down</h3>
-                        <p>5</p>
+                        <p>{{data.cv}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>GIT Views</h3>
-                        <p>35</p>
+                        <p>{{data.git}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>IN Views</h3>
-                        <p>85</p>
+                        <p>{{data.linkedin}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="scripts/logout.js"></script>
 </body>
 </html>
