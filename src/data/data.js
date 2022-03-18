@@ -23,3 +23,8 @@ exports.getGit = () => {
 exports.getLinkedin = () => {
     return db.query('SELECT * FROM linkedin')
 }
+
+exports.addView = (browser) => {
+    return  db.query('INSERT INTO views(user_agent) VALUES($1)', [browser])
+}
+

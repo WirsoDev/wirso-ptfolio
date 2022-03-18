@@ -16,7 +16,6 @@ router.get('/stats', async (req, res)=>{
             git: users['git'].length,
             linkedin: users['linkedin'].length,
         }
-        console.log(data)
         return res.render('stats.html', data={data})
     }
     return res.redirect('/login')
@@ -45,5 +44,9 @@ router.post('/login', async (req, res)=>{
     return res.render('login.html', data={msg: 'Pass not valid'})
 })
 
+
+router.post('/stats', async (req, res) =>{
+
+})
 
 module.exports = router

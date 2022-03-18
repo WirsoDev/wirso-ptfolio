@@ -1,4 +1,3 @@
-const object = require('nunjucks/src/object')
 const getData = require('../data/data')
 
 exports.users = ()=>{
@@ -21,4 +20,8 @@ exports.allStats = async ()=>{
     }
 
     return data
+}
+
+exports.addviews = (browser)=>{
+    return getData.addView(browser)
 }
