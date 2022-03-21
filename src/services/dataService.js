@@ -25,3 +25,20 @@ exports.allStats = async ()=>{
 exports.addviews = (browser)=>{
     return getData.addView(browser)
 }
+
+exports.AddStats = (browser, stat)=>{
+    switch(stat){
+        case('li-stat'):
+            return getData.addLinkedin(browser)
+            break
+        case('git-stat'):
+            return getData.addGit(browser)
+            break
+        case('mail-stat'):
+            return getData.addEmail(browser)
+            break
+        case('cv-stat'):
+            return getData.addCv(browser)
+            break
+    }
+}

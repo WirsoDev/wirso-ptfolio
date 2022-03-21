@@ -33,7 +33,6 @@ router.get('/logout', (req, res)=>{
 
 
 router.post('/login', async (req, res)=>{
-
     const adminpass = await dataService.users()
     const serverPass = adminpass[0]['pass']
     const userPass = req.body.pass 
@@ -46,7 +45,14 @@ router.post('/login', async (req, res)=>{
 
 
 router.post('/stats', async (req, res) =>{
-
+    const valueToUpdate = req.query.value
+    const browser = req.body.msg
+    if(valueToUpdate || browser){
+        await dataService.AddStats(browser, valueToUpdate)
+        console.log('data add to db:' + valueToUpdate + ' -- ' + browser)
+    }
+    return null
 })
+
 
 module.exports = router

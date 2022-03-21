@@ -28,3 +28,19 @@ exports.addView = (browser) => {
     return  db.query('INSERT INTO views(user_agent) VALUES($1)', [browser])
 }
 
+exports.addLinkedin = (browser) => {
+    return  db.query('INSERT INTO linkedin(user_agent) VALUES($1)', [browser])
+}
+
+exports.addGit = (browser) => {
+    return  db.query('INSERT INTO git(user_agent) VALUES($1)', [browser])
+}
+
+exports.addEmail = (browser) => {
+    return  db.query('INSERT INTO emails(user_agent) VALUES($1)', [browser])
+}
+
+exports.addCv = (browser) => {
+    return  db.query('INSERT INTO cv(user_agent) VALUES($1)', [browser])
+}
+
