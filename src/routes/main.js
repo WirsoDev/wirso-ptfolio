@@ -2,9 +2,8 @@ const Express = require('express')
 const router = Express.Router()
 const dataService = require('../services/dataService')
 
+
 router.get('/', async (req, res)=>{
-
-
     const userAgent = req.headers['user-agent']
     let browserName
     if(userAgent.match(/chrome|chromium|crios/i)){
@@ -25,7 +24,6 @@ router.get('/', async (req, res)=>{
 
     return(res.render('main.html'))
 })
-
 
 
 module.exports = router
