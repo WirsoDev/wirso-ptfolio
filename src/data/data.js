@@ -44,3 +44,7 @@ exports.addCv = (browser) => {
     return  db.query('INSERT INTO cv(user_agent) VALUES($1)', [browser])
 }
 
+exports.getOrderViews = () => {
+    return db.query('SELECT * FROM views ORDER BY view_date DESC LIMIT 10')
+}
+

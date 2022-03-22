@@ -10,7 +10,19 @@ let isValidUser = false
 router.get('/stats', async (req, res)=>{
     if(isValidUser){
         const users = await dataService.allStats()
-        console.log(users['views'])
+        const viewsOrder = await dataService.getViewsOrder()
+        let empty = []
+        let count = 1
+        viewsOrder.forEach( e => {
+            let newData = {
+                id:count,
+                user_agent:e.user_agent,
+                view_date:e.view_date.toString().slice(0, 25)
+            }
+            empty.push(newData)
+            count ++
+        });
+
         let data = {
             views: users['views'].length,
             emails: users['emails'].length,
@@ -18,7 +30,7 @@ router.get('/stats', async (req, res)=>{
             git: users['git'].length,
             linkedin: users['linkedin'].length,
         }
-        return res.render('stats.html', data={qnt:data, views:users['views']})
+        return res.render('stats.html', data={qnt:data, views:empty})
     }
     return res.redirect('/login')
 })

@@ -8,8 +8,6 @@ router.get("/", async (req, res) => {
 
 
 router.post("/", async (req, res) => {
-  const isNewUser = req.body.msg
-  console.log(isNewUser)
     const userAgent = req.headers["user-agent"]
     let browserName
     if (userAgent.match(/chrome|chromium|crios/i)) {

@@ -42,3 +42,8 @@ exports.AddStats = (browser, stat)=>{
             break
     }
 }
+
+exports.getViewsOrder = () => {
+    return getData.getOrderViews()    
+
+}
