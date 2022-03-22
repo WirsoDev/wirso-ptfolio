@@ -18,25 +18,34 @@
                 <div class="stats-wrap-cont">
                     <div class="stats--card">
                         <h3>Views</h3>
-                        <p>{{data.views}}</p>
+                        <p>{{qnt.views}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>Emails</h3>
-                        <p>{{data.emails}}</p>
+                        <p>{{qnt.emails}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>CV Down</h3>
-                        <p>{{data.cv}}</p>
+                        <p>{{qnt.cv}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>GIT Views</h3>
-                        <p>{{data.git}}</p>
+                        <p>{{qnt.git}}</p>
                     </div>
                     <div class="stats--card">
                         <h3>IN Views</h3>
-                        <p>{{data.linkedin}}</p>
+                        <p>{{qnt.linkedin}}</p>
                     </div>
                 </div>
+            </div>
+            <div class="stats-title list">
+                <h3>Last views</h3>
+                <div class="list-cont">
+                    {% for item in views %}
+                        <p>User Agent: <span>{{item.user_agent}}</span> date: <span>{{item.view_date}}</span></p>
+                    {% endfor %}
+                </div>
+                <div class="sep"></div>
             </div>
         </div>
     </div>

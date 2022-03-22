@@ -1,5 +1,6 @@
 const Express = require('express')
 const { render } = require('express/lib/response')
+const { user } = require('pg/lib/defaults')
 const router = Express.Router()
 const dataService = require('../services/dataService')
 
@@ -9,6 +10,7 @@ let isValidUser = false
 router.get('/stats', async (req, res)=>{
     if(isValidUser){
         const users = await dataService.allStats()
+        console.log(users['views'])
         let data = {
             views: users['views'].length,
             emails: users['emails'].length,
@@ -16,7 +18,7 @@ router.get('/stats', async (req, res)=>{
             git: users['git'].length,
             linkedin: users['linkedin'].length,
         }
-        return res.render('stats.html', data={data})
+        return res.render('stats.html', data={qnt:data, views:users['views']})
     }
     return res.redirect('/login')
 })
