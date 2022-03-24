@@ -1,8 +1,10 @@
 const Express = require("express")
 const router = Express.Router()
 const dataService = require("../services/dataService")
+const {isValid} = require('../config/validUser')
 
 router.get("/", async (req, res) => {
+  isValid.valid = false
   return res.render("main.html");
 });
 

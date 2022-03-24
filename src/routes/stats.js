@@ -3,12 +3,13 @@ const { render } = require('express/lib/response')
 const { user } = require('pg/lib/defaults')
 const router = Express.Router()
 const dataService = require('../services/dataService')
+const {isValid} = require('../config/validUser')
 
-let isValidUser = false
+//let isValidUser = false
 
 
 router.get('/stats', async (req, res)=>{
-    if(isValidUser){
+    if(isValid.valid){
         const users = await dataService.allStats()
         const viewsOrder = await dataService.getViewsOrder()
         let empty = []
@@ -41,7 +42,7 @@ router.get('/login', (req, res)=>{
 })
 
 router.get('/logout', (req, res)=>{
-    isValidUser = false
+    isValid.valid = false
     return(res.render('login.html'))
 })
 
@@ -51,7 +52,7 @@ router.post('/login', async (req, res)=>{
     const serverPass = adminpass[0]['pass']
     const userPass = req.body.pass 
     if(userPass === serverPass){
-        isValidUser = true
+        isValid.valid = true
         return res.redirect('/stats')
     }
     return res.render('login.html', data={msg: 'Pass not valid'})
