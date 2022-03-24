@@ -80,9 +80,15 @@
 }
 
 .list p{
-    font-size: 18px;
+    font-size: 16px;
     color: #F0F0F0;
-    padding: 2px 0px;
+    padding: 13px;
+    background-color: rgba(224, 224, 224, 0.178);
+    margin: 10px 0px;
+    width: 95%;
+    border-radius: 10px;
+    transform: scale(.99);
+    transition: all 200ms;
 }
 
 .list p span{
@@ -91,16 +97,10 @@
 
 .list-cont{
     margin-top: 20px;
-    height: 150px;
+    height: 300px;
+    overflow: scroll;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-behavior: smooth;
-}
-
-.sep{
-    height: 2px;
-    background-color: #a1a1a1;
-    margin-top: 5px;
 }
 
 
